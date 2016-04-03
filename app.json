@@ -1,0 +1,7 @@
+{
+  "name": "FeedReader App",
+  "description": "A simple FeedReader hybrid mobile App",
+  "repository": "https://github.com/HaiderMalik12/FeedReader",
+  "logo": "http://ionicframework.com/img/ionic-logo-blog.png",
+  "keywords": ["ionic", "static"]
+}

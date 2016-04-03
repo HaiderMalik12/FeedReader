@@ -28,14 +28,15 @@
         </ion-header-bar>
         <ion-content>
             <div class="list">
-                <a class="item item-thumbnail-left" href="{{story.url}}" target="_blank" ng-repeat="story in stories">
-                    <img src="{{story.thumbnail}}" ng-if="story.thumbnail.startsWith('http')">
+                <a class="item item-thumbnail-left" href="{{story.url}}" target="_blank" ng-repeat="story in stories track by story.id">
+                    <img src="{{story.thumbnail}}" ng-if="story.thumbnail.startsWith(&apos;http&apos;)">
                     <h2 class="story-title">{{story.title}}</h2>
                     <span am-time-ago="story.created_utc" am-preprocess="unix"> </span>
-                    <p>-  {{story.domain}}
+                    <p>- {{story.domain}}
                     </p>
                 </a>
             </div>
+           
         </ion-content>
     </ion-pane>
 </body>
