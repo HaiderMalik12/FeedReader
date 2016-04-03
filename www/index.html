@@ -16,6 +16,9 @@
     <script src="cordova.js"></script>
     <!-- your app's js -->
     <script src="js/app.js"></script>
+    <!-- Moment js -->
+    <script src="lib/moment/moment.js"></script>
+    <script src="lib/angular-moment/angular-moment.js"></script>
 </head>
 
 <body ng-app="myreddit" ng-controller="RedditCtrl">
@@ -28,7 +31,9 @@
                 <a class="item item-thumbnail-left" href="{{story.url}}" target="_blank" ng-repeat="story in stories">
                     <img src="{{story.thumbnail}}" ng-if="story.thumbnail.startsWith('http')">
                     <h2 class="story-title">{{story.title}}</h2>
-                    <p>{{story.created_utc}} - {{story.domain}}</p>
+                    <span am-time-ago="story.created_utc" am-preprocess="unix"> </span>
+                    <p>-  {{story.domain}}
+                    </p>
                 </a>
             </div>
         </ion-content>
